@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <header>
+
+        <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+        <div class="overlay">
+      
+        <!-- The HTML5 video element that will create the background video on the header -->
+        <center><video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+          <source src="https://cdn.videvo.net/videvo_files/video/free/2018-01/large_watermarked/171124_H1_006_preview.mp4" type="video/mp4">
+        </video>
+      
+        <!-- The header content -->
+        <div class="container h-100">
+          <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white">
+              <h1 class="display-3">Welcome to Surf's Up!</h1>
+              <h2 class="lead mb-0">Hawaii Climate API</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      <!-- Page section example for content below the video header -->
+      <section class="my-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 mx-auto">
+              <center>
+              <p>List of available stations: <a href= '/api/v1.0/stations'> Stations</a></p>
+              <p>Precipitation observations for previous year: <a href= '/api/v1.0/precipitation'> Precipitation Records</a></p>
+              <p>Temperature Observations (TOBS) of most active stations for the previous year: <a href= '/api/v1.0/tobs'> Last Year's Dates and Temperature Records</a></p>
+              <p>Records for the minimum, average and the maximum temperatures for a start date (YYYY-MM-DD): <a href="/api/v1.0/2016-08-24"> Temperature Records for a Date Range</a></p>
+              <br></br>
+              <ui>
+                Records for the minimum, average and the maximum temperatures for a start and end date (Enter date in YYYY-MM-DD format):<br>
+                <br>    
+                    <form action="/api/v1.0" target="_blank" method="GET">
+                        &ensp; Start Date:
+                            <input type="text" name="Start Date" value="2016-08-24">
+                        <br>
+                        &ensp; End Date:
+                            <input type="text" name="End Date" value="2017-08-23">
+                        <br>
+                        &ensp;<input type="submit" value="Submit" style="font-size: medium; background-color: rgb(102, 225, 225)">
+                    </form>
+            </ui>
+            </h4>
+                <ul style="list-style-type:none;">
+                    <li>Date format YYYY-MM-DD</li>
+                    <li>Data ranges from 2010-01-01 to 2017-08-17</li>
+                    <li>Temperature: <span>&#8457;</span> </li>   
+                </ul>
+              </center>
+            </div>
+          </div>
+        </div>
+      </section>
+    </html>
